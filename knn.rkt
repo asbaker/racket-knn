@@ -83,19 +83,19 @@
   ; (pretty-print (count-all-classes k-neighbors))
 
   ; code example 5
-  (define k-neighbors (take (sort (map (curry iris-distance-euclidean classify-me) training-data) iris-distance-pair-<) 5))
-  (pretty-print (cdar (sort (count-all-classes k-neighbors) iris-distance-pair->)))
+  ; (define k-neighbors (take (sort (map (curry iris-distance-euclidean classify-me) training-data) iris-distance-pair-<) 5))
+  ; (pretty-print (cdar (sort (count-all-classes k-neighbors) iris-distance-pair->)))
 
 
 
   ; classify from a file
-  ; (define k 5)
-  ; (define test-data (get-data "test-data/test_data2.csv"))
-  ; (define ml-classes (map (curry knn-classify k training-data) test-data))
-  ; (define real-classes (map iris-classification test-data))
+  (define k 5)
+  (define test-data (get-data "test-data/test_data2.csv"))
+  (define ml-classes (map (curry knn-classify k training-data) test-data))
+  (define real-classes (map iris-classification test-data))
 
-  ; (pretty-print '("Classified . Actual"))
-  ; (map (compose pretty-print cons) ml-classes real-classes)
+  (pretty-print '("Classified . Actual"))
+  (map (compose pretty-print cons) ml-classes real-classes)
 
   (void)
   )
