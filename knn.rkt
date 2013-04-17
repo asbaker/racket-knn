@@ -70,7 +70,7 @@
   ; code example 1
   ; (pretty-print training-data)
 
-  (define classify-me (iris 6.3 2.5 4.9 1.5 "Iris-versicolor"))
+  ; (define classify-me (iris 6.3 2.5 4.9 1.5 "Iris-versicolor"))
 
   ; code example 2
   ; (pretty-print (map (curry iris-distance-euclidean classify-me) training-data))
@@ -88,7 +88,7 @@
 
 
 
-  ; classify from a file
+  ; code example 6
   (define k 5)
   (define test-data (get-data "test-data/test_data2.csv"))
   (define ml-classes (map (curry knn-classify k training-data) test-data))
