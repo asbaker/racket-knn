@@ -5,4 +5,4 @@ K Nearest Neighbors, KNN, is a lazy, supervised machine learning algorithm. This
 
 To run the tests execute raco test *-test.rkt
 
-To run the algorithm execut racket -f knn.rkt -m
+To run the algorithm execut racket -t knn.rkt -m
